@@ -49,14 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const techStack = repo.language ? `
             <div class="flex items-center gap-2 mt-3">
-                <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-xs font-semibold">${repo.language}</span>
+                <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-semibold">${repo.language}</span>
                 ${repo.stargazers_count > 0 ? `<span class="text-yellow-500 text-sm">⭐ ${repo.stargazers_count}</span>` : ''}
             </div>
         ` : '';
         
         const demoButton = repo.homepage ? `
             <a href="${repo.homepage}" target="_blank" rel="noopener noreferrer" 
-               class="glass text-cyan-500 px-6 py-3 rounded-full font-semibold hover:bg-white transition-all">
+               class="glass text-orange-500 px-6 py-3 rounded-full font-semibold hover:bg-white transition-all">
                 Live Demo →
             </a>
         ` : '';
@@ -192,11 +192,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         navLinks.forEach(link => {
-            link.classList.remove('text-cyan-500');
+            link.classList.remove('text-orange-500');
             link.classList.add('text-gray-700');
             if (link.getAttribute('href') === `#${current}`) {
                 link.classList.remove('text-gray-700');
-                link.classList.add('text-cyan-500');
+                link.classList.add('text-orange-500');
             }
         });
     });
